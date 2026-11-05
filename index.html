@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supreme Aircon | Authorized Daikin HVAC Partner in Navi Mumbai</title>
+  <meta name="description" content="Supreme Aircon is Navi Mumbai's premier Daikin Authorized Partner with 20+ years of AC installation, jet servicing, and commercial VRV expertise. 90-min dispatch across Vashi, Nerul, Kharghar, and beyond.">
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            daikin: '#0097D8',
+            'daikin-dark': '#007AA8',
+            navy: '#0B192C',
+            'navy-light': '#1E3E62',
+            accent: '#FF6B00'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased selection:bg-daikin selection:text-white">
+
+  <!-- =====================================================
+       1. TOP UTILITY BAR (CLEAN & MINIMAL)
+  ====================================================== -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 text-daikin font-medium">
+          <span class="w-2 h-2 rounded-full bg-daikin animate-pulse"></span>
+          Authorized Daikin HVAC Partner
+        </span>
+        <span class="text-slate-600 hidden sm:inline">&bull;</span>
+        <span class="text-slate-400 hidden sm:inline">Navi Mumbai &amp; MMR</span>
+      </div>
+
+      <div class="flex items-center gap-5 font-medium">
+        <a href="tel:02245663333" class="text-white hover:text-daikin transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-accent text-xs"></i>
+          <span>022 4566 3333</span>
+          <span class="text-[10px] text-slate-400 font-normal hidden md:inline">(30 Lines)</span>
+        </a>
+        <a href="https://wa.me/918898018909?text=Hello%20Supreme%20Aircon%2C%20I%20need%20AC%20service." target="_blank" class="text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1">
+          <i class="fa-brands fa-whatsapp text-sm"></i>
+          <span class="hidden md:inline">+91 88980 18909</span>
+          <span class="md:hidden">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================
+       2. PRIMARY HEADER (CLEAN, SPACIOUS, UNCLUTTERED)
+  ====================================================== -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Official Logo & Partner Tag -->
+        <a href="#" class="flex items-center gap-4 group shrink-0">
+          <img src="assets/images/logo.png" alt="Supreme Aircon" class="h-11 w-auto object-contain">
+          <div class="hidden sm:flex items-center gap-2 border-l border-slate-200 pl-4 py-1">
+            <span class="text-[10px] font-bold text-white bg-daikin px-2 py-0.5 rounded tracking-wider">DAIKIN</span>
+            <span class="text-xs text-slate-500 font-medium">Authorized Partner</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links (Clean & Essential) -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+          <a href="#services" class="hover:text-daikin transition-colors">Services</a>
+          <a href="#commercial" class="hover:text-daikin transition-colors">Commercial &amp; VRV</a>
+          <a href="#amc" class="hover:text-daikin transition-colors">AMC Plans</a>
+          <a href="#why-us" class="hover:text-daikin transition-colors">Why Supreme</a>
+          <a href="#coverage" class="hover:text-daikin transition-colors">Areas Covered</a>
+          <a href="#contact" class="hover:text-daikin transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Action Button -->
+        <div class="hidden sm:flex items-center gap-3 shrink-0">
+          <button onclick="openBookingModal('Header Call to Action')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold bg-accent hover:bg-orange-600 text-white shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5">
+            <i class="fa-regular fa-calendar-check text-xs"></i>
+            <span>Book Service</span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="lg:hidden flex items-center">
+          <button id="mobile-menu-btn" class="p-2.5 rounded-lg text-slate-700 hover:text-daikin hover:bg-slate-100 transition-colors" aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-5 space-y-4 shadow-lg">
+      <a href="#services" class="block py-2 text-slate-700 hover:text-daikin font-semibold border-b border-slate-100">Services &amp; Repairs</a>
+      <a href="#commercial" class="block py-2 text-slate-700 hover:text-daikin font-semibold border-b border-slate-100">Commercial &amp; VRV Systems</a>
+      <a href="#amc" class="block py-2 text-slate-700 hover:text-daikin font-semibold border-b border-slate-100">Annual Maintenance (AMC)</a>
+      <a href="#why-us" class="block py-2 text-slate-700 hover:text-daikin font-semibold border-b border-slate-100">Why Supreme</a>
+      <a href="#coverage" class="block py-2 text-slate-700 hover:text-daikin font-semibold border-b border-slate-100">Navi Mumbai Coverage</a>
+      <a href="#contact" class="block py-2 text-slate-700 hover:text-daikin font-semibold">Contact &amp; Location</a>
+      <div class="pt-2 flex flex-col gap-2.5">
+        <button onclick="openBookingModal('Mobile Menu Booking')" class="w-full py-3 bg-accent text-white font-bold rounded-xl shadow text-sm">
+          Book Service Call
+        </button>
+        <a href="tel:02245663333" class="w-full text-center py-2.5 bg-slate-100 text-navy font-bold rounded-xl text-sm border border-slate-200">
+          <i class="fa-solid fa-phone text-daikin mr-1.5"></i> Call 022 4566 3333
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================================================
+       3. HERO SECTION (BREATHABLE, MODERN, HIGH-IMPACT)
+  ====================================================== -->
+  <section class="relative bg-gradient-to-b from-slate-50 to-white pt-12 pb-20 md:py-24 overflow-hidden border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Content -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 bg-sky-50 text-daikin px-3.5 py-1.5 rounded-full text-xs font-semibold border border-sky-100">
+            <i class="fa-solid fa-shield-check"></i>
+            <span>Authorized Daikin Sales &amp; Service Partner</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy tracking-tight leading-[1.15]">
+            Cooling engineered with <span class="text-daikin">precision</span> &amp; trust.
+          </h1>
+
+          <p class="text-lg text-slate-600 leading-relaxed max-w-xl">
+            Over 20 years delivering reliable air conditioning across Navi Mumbai. From residential split ACs to commercial VRV engineering—backed by a 30-line emergency response and zero upfront fees.
+          </p>
+
+          <!-- Core Value Props (Minimal 3 points) -->
+          <div class="flex flex-wrap gap-y-2 gap-x-6 text-sm font-semibold text-slate-700 pt-1">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-daikin"></i>
+              <span>90-Min Rapid Dispatch</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-daikin"></i>
+              <span>Daikin Certified Engineers</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-daikin"></i>
+              <span>Pay After Satisfaction</span>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <button onclick="openBookingModal('Hero Primary')" class="px-7 py-3.5 rounded-xl text-base font-bold bg-accent hover:bg-orange-600 text-white shadow-lg shadow-orange-500/20 transition-all flex items-center justify-center gap-2">
+              <i class="fa-regular fa-calendar-check text-sm"></i>
+              <span>Schedule Service Visit</span>
+            </button>
+            <a href="tel:02245663333" class="px-6 py-3.5 rounded-xl text-base font-bold bg-white text-navy border border-slate-300 hover:border-slate-400 hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-phone text-daikin"></i>
+              <span>022 4566 3333</span>
+            </a>
+          </div>
+
+          <!-- Rating Proof -->
+          <div class="flex items-center gap-3 pt-3 text-xs text-slate-500">
+            <div class="flex text-amber-400 text-sm">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <span class="font-bold text-slate-700">4.9 / 5.0</span>
+            <span>&bull;</span>
+            <span>Over 18,500+ homes &amp; offices serviced in Navi Mumbai</span>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Card -->
+        <div class="lg:col-span-5">
+          <div class="relative bg-white rounded-3xl p-3 shadow-xl border border-slate-200/80">
+            <!-- 3 Auto-changing Hero Slides (Widescreen 16:9 ratio to prevent cropping) -->
+            <div class="rounded-2xl overflow-hidden aspect-[16/10] sm:aspect-[16/9] relative bg-slate-900">
+              
+              <!-- Slide 1 -->
+              <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100 z-10 pointer-events-none">
+                <img src="assets/images/slider-1.jpg" alt="Daikin Air Conditioning Installation" class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/20 to-transparent flex items-end p-5 sm:p-6">
+                  <div class="text-white">
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-daikin bg-white/20 backdrop-blur-md px-2.5 py-1 rounded">Daikin Official Partner</span>
+                    <h3 class="text-base sm:text-lg font-bold mt-1.5">Daikin Inverter &amp; VRV Systems</h3>
+                    <p class="text-xs text-slate-200 mt-0.5">Residential &amp; Commercial Specialists</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 z-0 pointer-events-none">
+                <img src="assets/images/slider-2.jpg" alt="Commercial VRV Solutions" class="w-full h-full object-cover object-[72%_center]">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/20 to-transparent flex items-end p-5 sm:p-6">
+                  <div class="text-white">
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-accent bg-white/20 backdrop-blur-md px-2.5 py-1 rounded">Precision HVAC Engineering</span>
+                    <h3 class="text-base sm:text-lg font-bold mt-1.5">Commercial Climate Control</h3>
+                    <p class="text-xs text-slate-200 mt-0.5">Turnkey VRV, ductable &amp; cassette systems</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 z-0 pointer-events-none">
+                <img src="assets/images/slider-3.jpg" alt="Certified AC Repairs & Maintenance" class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/20 to-transparent flex items-end p-5 sm:p-6">
+                  <div class="text-white">
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-400 bg-white/20 backdrop-blur-md px-2.5 py-1 rounded">Rapid Response SLA</span>
+                    <h3 class="text-base sm:text-lg font-bold mt-1.5">90-Minute Emergency Service</h3>
+                    <p class="text-xs text-slate-200 mt-0.5">Certified engineers across all Navi Mumbai nodes</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Floating mini badge -->
+            <div class="bg-slate-50 rounded-xl p-4 mt-3 flex items-center justify-between border border-slate-100">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
+                  <i class="fa-solid fa-clock-rotate-left"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-navy">Same-Day Service Available</div>
+                  <div class="text-[11px] text-slate-500">Across Vashi, Nerul, Kharghar &amp; Panvel</div>
+                </div>
+              </div>
+              <a href="https://wa.me/918898018909?text=Hi%2C%20I%20need%20quick%20AC%20service" target="_blank" class="text-xs font-bold text-emerald-600 hover:text-emerald-700 flex items-center gap-1">
+                <span>Chat</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       4. KEY STATS (CLEAN & SUBTLE)
+  ====================================================== -->
+  <section class="py-10 bg-white border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <div class="text-3xl font-extrabold text-navy">20+</div>
+          <div class="text-xs font-semibold text-slate-500 mt-0.5">Years in Business</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-daikin">18,500+</div>
+          <div class="text-xs font-semibold text-slate-500 mt-0.5">Units Maintained</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-accent">30 Lines</div>
+          <div class="text-xs font-semibold text-slate-500 mt-0.5">Instant Call Routing</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-emerald-600">90 Mins</div>
+          <div class="text-xs font-semibold text-slate-500 mt-0.5">Average Arrival Time</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       5. CORE SERVICES (STREAMLINED & CLEAN CARDS)
+  ====================================================== -->
+  <section id="services" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="text-3xl font-extrabold text-navy tracking-tight">Our Core Services</h2>
+        <p class="text-slate-600 text-sm mt-2">
+          Professional, warranty-backed cooling solutions for residential homes and commercial spaces.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1: Jet Servicing -->
+        <div class="group bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-daikin/50 transform hover:-translate-y-2.5 transition-all duration-300 ease-out flex flex-col justify-between cursor-pointer">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-sky-50 text-daikin flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-shower"></i>
+            </div>
+            <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-daikin transition-colors">Power Jet Foam Servicing</h3>
+            <p class="text-slate-600 text-xs leading-relaxed mb-4">
+              Deep high-pressure water jet wash with anti-bacterial foam to clear indoor cooling coils, blower fans, and outdoor condensers.
+            </p>
+            <ul class="text-xs text-slate-500 space-y-1.5 mb-6">
+              <li><i class="fa-solid fa-check text-daikin mr-1.5"></i> +30% cooling efficiency</li>
+              <li><i class="fa-solid fa-check text-daikin mr-1.5"></i> Mess-proof catchment bag</li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Power Jet Foam Servicing')" class="w-full py-2.5 rounded-lg bg-slate-50 group-hover:bg-daikin group-hover:text-white text-navy font-bold text-xs transition-colors border border-slate-200">
+            Book Service
+          </button>
+        </div>
+
+        <!-- Card 2: Diagnostics & Repairs -->
+        <div class="group bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-emerald-500/50 transform hover:-translate-y-2.5 transition-all duration-300 ease-out flex flex-col justify-between cursor-pointer">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-emerald-600 transition-colors">Diagnostics &amp; Gas Refill</h3>
+            <p class="text-slate-600 text-xs leading-relaxed mb-4">
+              Accurate fault detection, nitrogen pressure testing for micro-leaks, and 100% pure R-32 / R-410A gas refilling on digital scales.
+            </p>
+            <ul class="text-xs text-slate-500 space-y-1.5 mb-6">
+              <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> 90-day warranty on gas</li>
+              <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Original OEM spare parts</li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('AC Repair & Gas Refill')" class="w-full py-2.5 rounded-lg bg-slate-50 group-hover:bg-emerald-600 group-hover:text-white text-navy font-bold text-xs transition-colors border border-slate-200">
+            Diagnose Issue
+          </button>
+        </div>
+
+        <!-- Card 3: Installation & Relocation -->
+        <div class="group bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-accent/50 transform hover:-translate-y-2.5 transition-all duration-300 ease-out flex flex-col justify-between cursor-pointer">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-orange-50 text-accent flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-toolbox"></i>
+            </div>
+            <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-accent transition-colors">Certified AC Installation</h3>
+            <p class="text-slate-600 text-xs leading-relaxed mb-4">
+              Factory-trained mounting using 100% heavy copper tubing, vacuum pump degassing, and vibration-damped bracket fittings.
+            </p>
+            <ul class="text-xs text-slate-500 space-y-1.5 mb-6">
+              <li><i class="fa-solid fa-check text-accent mr-1.5"></i> Split, Cassette &amp; Ductable</li>
+              <li><i class="fa-solid fa-check text-accent mr-1.5"></i> Nitrogen tested piping</li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('AC Installation')" class="w-full py-2.5 rounded-lg bg-slate-50 group-hover:bg-accent group-hover:text-white text-navy font-bold text-xs transition-colors border border-slate-200">
+            Book Installation
+          </button>
+        </div>
+
+        <!-- Card 4: PCB & Compressor -->
+        <div class="group bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-indigo-500/50 transform hover:-translate-y-2.5 transition-all duration-300 ease-out flex flex-col justify-between cursor-pointer">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-indigo-600 transition-colors">Inverter PCB Repair</h3>
+            <p class="text-slate-600 text-xs leading-relaxed mb-4">
+              Advanced motherboard troubleshooting for Daikin error codes (U4, E7, L5). Save up to 60% compared to purchasing a new circuit board.
+            </p>
+            <ul class="text-xs text-slate-500 space-y-1.5 mb-6">
+              <li><i class="fa-solid fa-check text-indigo-600 mr-1.5"></i> Component level testing</li>
+              <li><i class="fa-solid fa-check text-indigo-600 mr-1.5"></i> Same-day diagnosis</li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('PCB Board Repair')" class="w-full py-2.5 rounded-lg bg-slate-50 group-hover:bg-indigo-600 group-hover:text-white text-navy font-bold text-xs transition-colors border border-slate-200">
+            Inquire PCB Repair
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================
+       6. COMMERCIAL VRV & LUXURY HOME VRV (CLEAN SHOWCASE)
+  ====================================================== -->
+  <section id="commercial" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-5">
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold text-daikin uppercase tracking-wider bg-sky-50 px-3 py-1 rounded-full border border-sky-100">
+            Enterprise &amp; Luxury Solutions
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">
+            Commercial HVAC &amp; Daikin Home VRV Systems
+          </h2>
+
+          <p class="text-slate-600 text-base leading-relaxed">
+            From luxury bungalows on Palm Beach Road needing discreet multi-zone cooling to multi-floor IT offices in Airoli Mindspace, we engineer turnkey centralized systems with energy savings of up to 40%.
+          </p>
+
+          <div class="space-y-3 pt-2">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-sky-100 text-daikin flex items-center justify-center text-xs shrink-0 mt-0.5">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div>
+                <strong class="text-sm text-navy block font-semibold">Daikin Home VRV for Penthouses &amp; Villas</strong>
+                <p class="text-xs text-slate-500">Connect up to 8 indoor units to a single outdoor unit, keeping your balconies and facade clutter-free.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-sky-100 text-daikin flex items-center justify-center text-xs shrink-0 mt-0.5">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div>
+                <strong class="text-sm text-navy block font-semibold">Commercial VRV-X &amp; Ductable Systems</strong>
+                <p class="text-xs text-slate-500">Tailored heat load calculations, sheet metal duct fabrication, and BMS integration for corporate spaces.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-sky-100 text-daikin flex items-center justify-center text-xs shrink-0 mt-0.5">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div>
+                <strong class="text-sm text-navy block font-semibold">Architect &amp; Interior Designer Collaboration</strong>
+                <p class="text-xs text-slate-500">Concealed piping and flush ceiling cassette units designed prior to false ceiling finishing.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-3">
+            <button onclick="openBookingModal('Commercial VRV Consultation')" class="px-6 py-3 bg-navy hover:bg-navy-light text-white font-bold text-sm rounded-xl transition-all shadow">
+              Request Commercial Site Survey
+            </button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-50 flex items-center justify-center">
+            <img src="assets/images/why_choose_us.jpg" alt="Commercial VRV Installation & Certified Engineer" class="w-full h-auto max-h-[500px] object-cover object-top">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================
+       7. ANNUAL MAINTENANCE CONTRACTS (AMC)
+  ====================================================== -->
+  <section id="amc" class="py-20 bg-slate-50 border-t border-slate-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="text-3xl font-extrabold text-navy tracking-tight">Annual Maintenance Plans (AMC)</h2>
+        <p class="text-slate-600 text-sm mt-2">
+          Prevent costly breakdowns and maintain peak cooling year-round for your home or corporate facility.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Standard AMC -->
+        <div class="group bg-white rounded-2xl border border-slate-200 p-8 shadow-sm hover:shadow-xl hover:border-slate-300 transform hover:-translate-y-2.5 transition-all duration-300 ease-out flex flex-col justify-between cursor-pointer">
+          <div>
+            <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Preventative Care</div>
+            <h3 class="text-2xl font-bold text-navy mb-2 group-hover:text-daikin transition-colors">Non-Comprehensive AMC</h3>
+            <p class="text-slate-600 text-xs mb-6">Regular scheduled inspections and cleaning for residential units.</p>
+            <ul class="text-xs text-slate-700 space-y-3 mb-8">
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> 3 Scheduled deep jet-wash cleanings</li>
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> Unlimited breakdown callouts</li>
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> Priority service scheduling</li>
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> 15% discount on spare parts</li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Standard AMC Plan')" class="w-full py-3 bg-slate-100 group-hover:bg-navy group-hover:text-white text-navy font-bold text-xs rounded-xl transition-colors">
+            Select Standard AMC
+          </button>
+        </div>
+
+        <!-- Comprehensive AMC -->
+        <div class="group bg-white rounded-2xl border-2 border-daikin p-8 shadow-md hover:shadow-2xl hover:border-daikin transform hover:-translate-y-2.5 transition-all duration-300 ease-out relative flex flex-col justify-between cursor-pointer">
+          <div class="absolute -top-3 right-6 bg-daikin text-white text-[10px] font-bold uppercase px-3 py-1 rounded-full shadow-sm">
+            Complete Peace of Mind
+          </div>
+          <div>
+            <div class="text-xs font-bold text-daikin uppercase tracking-wider mb-2">All-Inclusive Coverage</div>
+            <h3 class="text-2xl font-bold text-navy mb-2 group-hover:text-daikin transition-colors">Comprehensive AMC</h3>
+            <p class="text-slate-600 text-xs mb-6">Zero surprise bills. Covers labor, periodic servicing, parts, and gas.</p>
+            <ul class="text-xs text-slate-700 space-y-3 mb-8">
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-daikin"></i> 4 Scheduled power jet cleanings</li>
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-daikin"></i> 100% Free refrigerant gas refilling</li>
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-daikin"></i> Free PCB repairs and motor replacements</li>
+              <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-daikin"></i> Guaranteed 90-minute breakdown response</li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Comprehensive AMC Plan')" class="w-full py-3 bg-daikin hover:bg-daikin-dark text-white font-bold text-xs rounded-xl transition-colors shadow">
+            Select Comprehensive AMC
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================
+       8. WHY SUPREME (4 CLEAR PILLARS)
+  ====================================================== -->
+  <section id="why-us" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-extrabold text-navy tracking-tight">Why Choose Supreme Aircon</h2>
+        <p class="text-slate-600 text-sm mt-2">
+          Experience the peace of mind that comes with factory-certified technicians and transparent service standards.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-sky-50 text-daikin flex items-center justify-center text-2xl mb-4">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <h3 class="text-base font-bold text-navy mb-1.5">Authorized Daikin Partner</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Direct factory support, authentic OEM spare parts, and certified technician training on all inverter models.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-orange-50 text-accent flex items-center justify-center text-2xl mb-4">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <h3 class="text-base font-bold text-navy mb-1.5">30-Line Call Center</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            No endless busy signals. Our multi-line PBX ensures your call is answered immediately by dispatch coordinators.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl mb-4">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+          <h3 class="text-base font-bold text-navy mb-1.5">Zero Advance Payment</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            You only pay after the work is completely diagnosed, tested, and approved to your full satisfaction.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl mb-4">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="text-base font-bold text-navy mb-1.5">90-Day Written Warranty</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            All repair jobs, replaced spares, and gas refilling come with complete 90-day peace of mind.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================
+       9. NAVI MUMBAI COVERAGE ZONES
+  ====================================================== -->
+  <section id="coverage" class="py-16 bg-slate-50 border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/80 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-5 space-y-3">
+            <span class="text-xs font-bold text-daikin uppercase tracking-wider">Fast Service Across MMR</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-navy">
+              Serving All Nodes of Navi Mumbai
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Our mobile service technicians are stationed near Palm Beach Road, Thane-Belapur Road, and Sion-Panvel Highway for immediate dispatch.
+            </p>
+          </div>
+
+          <div class="lg:col-span-7 flex flex-wrap gap-2.5">
+            <span class="px-4 py-2 bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-daikin rounded-xl text-xs font-semibold transition-colors border border-slate-200/60">Vashi (Sectors 1–30)</span>
+            <span class="px-4 py-2 bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-daikin rounded-xl text-xs font-semibold transition-colors border border-slate-200/60">Sanpada</span>
+            <span class="px-4 py-2 bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-daikin rounded-xl text-xs font-semibold transition-colors border border-slate-200/60">Palm Beach Road</span>
+            <span class="px-4 py-2 bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-daikin rounded-xl text-xs font-semibold transition-colors border border-slate-200/60">Nerul East &amp; West</span>
+            <span class="px-4 py-2 bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-daikin rounded-xl text-xs font-semibold transition-colors border border-slate-200/60">Seawoods</span>
+            <span class="px-4 py-2 bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-daikin rounded-xl text-xs font-semibold transition-colors border border-slate-200/60">CBD Belapur</span>
+            <span class="px-4 py-2 bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-daikin rounded-xl text-xs font-semibold transition-colors border border-slate-200/60">Kharghar</span>
+            <span class="px-4 py-2 bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-daikin rounded-xl text-xs font-semibold transition-colors border border-slate-200/60">Ulwe</span>
+            <span class="px-4 py-2 bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-daikin rounded-xl text-xs font-semibold transition-colors border border-slate-200/60">Airoli</span>
+            <span class="px-4 py-2 bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-daikin rounded-xl text-xs font-semibold transition-colors border border-slate-200/60">Ghansoli</span>
+            <span class="px-4 py-2 bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-daikin rounded-xl text-xs font-semibold transition-colors border border-slate-200/60">Kopar Khairane</span>
+            <span class="px-4 py-2 bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-daikin rounded-xl text-xs font-semibold transition-colors border border-slate-200/60">Kamothe</span>
+            <span class="px-4 py-2 bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-daikin rounded-xl text-xs font-semibold transition-colors border border-slate-200/60">Panvel</span>
+            <span class="px-4 py-2 bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-daikin rounded-xl text-xs font-semibold transition-colors border border-slate-200/60">Thane West</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================
+       10. CONTACT & BOOKING BANNER
+  ====================================================== -->
+  <section id="contact" class="py-20 bg-navy text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-4">
+          <span class="text-xs font-bold text-accent uppercase tracking-wider">Direct Dispatch</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            Need fast AC service or a commercial consultation?
+          </h2>
+          <p class="text-slate-300 text-sm max-w-lg leading-relaxed">
+            Our certified technicians are ready to assist. Call our 30-line exchange, message us on WhatsApp, or book an inspection online.
+          </p>
+
+          <div class="pt-4 flex flex-wrap gap-6 text-sm text-slate-300">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-daikin"></i>
+              <span><strong>022 4566 3333</strong> (30 Lines)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+              <span><strong>+91 88980 18909</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col gap-3.5">
+          <button onclick="openBookingModal('Footer Booking')" class="w-full py-4 bg-accent hover:bg-orange-600 text-white font-bold text-sm rounded-xl transition-all shadow-lg text-center">
+            <i class="fa-regular fa-calendar-check mr-2"></i> Book Service Visit
+          </button>
+          <a href="tel:02245663333" class="w-full py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm rounded-xl border border-slate-700 transition-all text-center flex items-center justify-center gap-2">
+            <i class="fa-solid fa-phone text-daikin"></i> Call 022 4566 3333
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================
+       11. CLEAN MINIMAL FOOTER
+  ====================================================== -->
+  <footer class="bg-slate-900 text-slate-400 text-xs py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-slate-800">
+        <div>
+          <div class="text-white font-extrabold text-base tracking-tight">SUPREME AIRCON</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">
+            Sunshine CHS, Sector 30, Sanpada Station Road, Vashi, Navi Mumbai &bull; 400703
+          </div>
+        </div>
+        <div class="flex items-center gap-6 text-slate-300 font-medium">
+          <a href="#services" class="hover:text-white transition-colors">Services</a>
+          <a href="#commercial" class="hover:text-white transition-colors">Commercial &amp; VRV</a>
+          <a href="#amc" class="hover:text-white transition-colors">AMC</a>
+          <a href="#coverage" class="hover:text-white transition-colors">Coverage</a>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-slate-500 text-[11px]">
+        <div>&copy; 2026 Supreme Aircon. Authorized Daikin Partner. All rights reserved.</div>
+        <div class="flex items-center gap-4">
+          <span>info@supremeaircon.in</span>
+          <span>&bull;</span>
+          <span>022 4566 3333</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================
+       12. BOOKING MODAL
+  ====================================================== -->
+  <div id="booking-modal" class="fixed inset-0 z-50 hidden bg-navy/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full overflow-hidden shadow-2xl border border-slate-200">
+      
+      <div class="bg-navy p-5 text-white flex justify-between items-center">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-daikin">Supreme Aircon Dispatch</span>
+          <h3 class="text-base font-bold">Schedule an AC Service Visit</h3>
+        </div>
+        <button onclick="closeBookingModal()" class="text-slate-400 hover:text-white text-2xl leading-none">&times;</button>
+      </div>
+
+      <form id="modal-form" onsubmit="handleModalSubmit(event)" class="p-6 space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Service Needed</label>
+          <select id="modal-service" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3.5 py-2.5 text-xs text-slate-800 font-semibold focus:outline-none focus:border-daikin">
+            <option value="Power Jet Foam Servicing">Power Jet Foam Servicing</option>
+            <option value="AC Repair & Gas Refill">AC Repair &amp; Gas Refill</option>
+            <option value="AC Installation / Relocation">AC Installation / Relocation</option>
+            <option value="Commercial VRV / Ductable Inquiry">Commercial VRV / Ductable Inquiry</option>
+            <option value="Annual Maintenance Contract (AMC)">Annual Maintenance Contract (AMC)</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name</label>
+            <input type="text" id="modal-name" required placeholder="Name" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:border-daikin focus:outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone Number</label>
+            <input type="tel" id="modal-phone" pattern="[0-9]{10}" required placeholder="10-digit mobile" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:border-daikin focus:outline-none">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Area in Navi Mumbai</label>
+          <select id="modal-locality" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:border-daikin focus:outline-none">
+            <option value="Vashi">Vashi</option>
+            <option value="Sanpada">Sanpada</option>
+            <option value="Nerul">Nerul</option>
+            <option value="Seawoods">Seawoods</option>
+            <option value="Belapur">CBD Belapur</option>
+            <option value="Kharghar">Kharghar</option>
+            <option value="Airoli">Airoli</option>
+            <option value="Panvel">Panvel</option>
+            <option value="Other MMR Area">Other MMR Area</option>
+          </select>
+        </div>
+
+        <button type="submit" class="w-full py-3 bg-accent hover:bg-orange-600 text-white font-bold rounded-lg shadow transition-all text-xs">
+          Confirm Service Call (Zero Upfront Charge)
+        </button>
+
+        <p class="text-[10px] text-center text-slate-500">
+          Our dispatch coordinator will call you in 15 minutes to confirm.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Mobile Floating Sticky Call & WhatsApp Bar -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 py-2.5 px-4 sm:hidden shadow-lg">
+    <div class="flex items-center gap-2">
+      <a href="tel:02245663333" class="flex-1 py-2 bg-slate-900 text-white font-bold rounded-lg text-xs text-center flex items-center justify-center gap-1.5">
+        <i class="fa-solid fa-phone text-daikin"></i>
+        <span>Call 30-Lines</span>
+      </a>
+      <a href="https://wa.me/918898018909?text=Hello%20Supreme%20Aircon%2C%20I%20need%20AC%20service." target="_blank" class="flex-1 py-2 bg-emerald-600 text-white font-bold rounded-lg text-xs text-center flex items-center justify-center gap-1.5">
+        <i class="fa-brands fa-whatsapp text-sm"></i>
+        <span>WhatsApp</span>
+      </a>
+      <button onclick="openBookingModal('Mobile Sticky')" class="flex-1 py-2 bg-accent text-white font-bold rounded-lg text-xs text-center">
+        <span>Book</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Floating Desktop WhatsApp Trigger Button -->
+  <a href="https://wa.me/918898018909?text=Hello%20Supreme%20Aircon%2C%20I%20have%20an%20inquiry%20regarding%20AC%20services." target="_blank" class="hidden sm:flex fixed bottom-6 right-6 z-40 w-13 h-13 p-3.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-xl items-center justify-center text-2xl transition-all transform hover:scale-105" title="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- =====================================================
+       13. SCRIPTS
+  ====================================================== -->
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Auto-changing Hero Image Slider (3 images, smooth crossfade, zero dots/controls)
+    let currentHeroSlide = 0;
+    const heroSlides = document.querySelectorAll('.hero-slide');
+
+    if (heroSlides.length > 1) {
+      setInterval(() => {
+        heroSlides[currentHeroSlide].classList.remove('opacity-100', 'z-10');
+        heroSlides[currentHeroSlide].classList.add('opacity-0', 'z-0');
+
+        currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+
+        heroSlides[currentHeroSlide].classList.remove('opacity-0', 'z-0');
+        heroSlides[currentHeroSlide].classList.add('opacity-100', 'z-10');
+      }, 3500); // changes smoothly every 3.5 seconds
+    }
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Modal Controller
+    function openBookingModal(serviceName) {
+      if (serviceName) {
+        const select = document.getElementById('modal-service');
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].value === serviceName) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      document.getElementById('booking-modal').classList.remove('hidden');
+    }
+
+    function closeBookingModal() {
+      document.getElementById('booking-modal').classList.add('hidden');
+    }
+
+    window.addEventListener('click', (e) => {
+      const modal = document.getElementById('booking-modal');
+      if (e.target === modal) {
+        closeBookingModal();
+      }
+    });
+
+    function handleModalSubmit(e) {
+      e.preventDefault();
+      const service = document.getElementById('modal-service').value;
+      const name = document.getElementById('modal-name').value;
+      const phone = document.getElementById('modal-phone').value;
+      const locality = document.getElementById('modal-locality').value;
+
+      const text = `*New Service Request from Supreme Aircon Website*%0A` +
+                   `• Service: ${service}%0A` +
+                   `• Name: ${name}%0A` +
+                   `• Phone: ${phone}%0A` +
+                   `• Locality: ${locality}, Navi Mumbai`;
+
+      alert(`Thank you ${name}! Your request for ${service} in ${locality} has been received. Our coordinator will call you in 15 minutes.`);
+      closeBookingModal();
+      window.open(`https://wa.me/918898018909?text=${text}`, '_blank');
+      document.getElementById('modal-form').reset();
+    }
+  </script>
+</body>
+</html>
